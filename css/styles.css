@@ -28,11 +28,47 @@ body {
 }
 
 #net {
-    height: 600px;
+    height: 250px;
     width: auto;
     position: absolute;
-
 }
+
+@keyframes rotateAndBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-600deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateAndBackFlipped {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(600deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.rotate {
+    animation: rotateAndBack 1s ease;
+}
+
+.rotateFlipped {
+    animation: rotateAndBackFlipped 1s ease;
+}
+
 
 .apple {
     height: 50px;
