@@ -11,7 +11,7 @@ body {
 }
 
 #wateringcan {
-    width: 150px;
+    width: 200px;
     position: fixed;
     bottom: 20%;
     left: 40%;
@@ -24,7 +24,10 @@ body {
 
 
 .waterdrop {
-    width: 10px;
+    width: 20px;
+    position: fixed;
+    bottom: 25%;
+    left: 40%;
 }
 
 #net {
@@ -32,43 +35,6 @@ body {
     width: auto;
     position: absolute;
 }
-
-@keyframes rotateAndBack {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-600deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes rotateAndBackFlipped {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(600deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-.rotate {
-    animation: rotateAndBack 1s ease;
-}
-
-.rotateFlipped {
-    animation: rotateAndBackFlipped 1s ease;
-}
-
 
 .apple {
     height: 50px;
