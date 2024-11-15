@@ -33,8 +33,10 @@ body {
     position: absolute;
 }
 
-/* Keyframes for normal rotate animation */
+
 @keyframes rotateAndBack {
+
+    /* Keyframes for animation of net */
     0% {
         transform: rotate(0deg);
     }
@@ -48,8 +50,10 @@ body {
     }
 }
 
-/* Keyframes for flipped rotate animation */
+
 @keyframes rotateAndBackFlipped {
+
+    /* Keyframes for animation of flipped net */
     0% {
         transform: scaleX(-1) rotate(0deg);
     }

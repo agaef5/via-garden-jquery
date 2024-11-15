@@ -14,19 +14,19 @@ $(document).ready(function () { // Add event listeners for mouse enter and mouse
 
 //Samuel Net Start
 
-$(document).on("mousedown", function (e) {
-    e.preventDefault(); // Prevent the default drag behavior
-    isClicked = true;   // Set the flag to true when the image is clicked
+$(document).on("mousedown", function (e) { //Disable the drag and drop of the pics
+    e.preventDefault();
+    isClicked = true;
 });
 
 let previousX = 0;
-let flipped;
-$(document).mousemove(function (e) {
+let flipped; // Variable for checking if the net is flipped
+$(document).mousemove(function (e) { // function that is flipping the net + following the mouse
     const currentX = e.pageX;
 
 
 
-    if (currentX > previousX) {
+    if (currentX > previousX) { // flipping the net
         $("#net").css("transform", "scaleX(-1)");
         flipped = true;
 
@@ -36,7 +36,7 @@ $(document).mousemove(function (e) {
     }
 
 
-    $("#net").css({
+    $("#net").css({ // following the mouse
         left: e.pageX - 60,
         top: e.pageY - 40
     });
@@ -45,7 +45,7 @@ $(document).mousemove(function (e) {
     previousX = currentX;
 });
 
-$("#net").click(function () {
+$("#net").click(function () { //Animation for net when click
 
     if (flipped === false) {
         $(this).addClass("rotate");
