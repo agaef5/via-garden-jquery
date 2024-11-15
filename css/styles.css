@@ -22,12 +22,19 @@ body {
     transform: rotate(-45deg);
 }
 
-
 .waterdrop {
     width: 20px;
-    position: fixed;
-    bottom: 25%;
-    left: 40%;
+    position: absolute;
+    display: none;
+}
+
+#flower {
+    width: 50px;
+    /* Adjust based on your image */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: none;
+    /* Initially hidden */
 }
 
 #net {
