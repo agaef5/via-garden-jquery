@@ -12,7 +12,7 @@ $(document).ready(function () { // Add event listeners for mouse enter and mouse
 });
 
 
-
+//Samuel Net Start
 let previousX = 0;
 let flipped;
 $(document).mousemove(function (e) {
@@ -58,4 +58,4 @@ $("#net").click(function () {
         }, 1000);
     }
 });
-
+//Samuel Net End
