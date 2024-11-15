@@ -12,6 +12,12 @@ $(document).ready(function () { // Add event listeners for mouse enter and mouse
 });
 
 
+//Samuel Net Start
+
+$(document).on("mousedown", function (e) {
+    e.preventDefault(); // Prevent the default drag behavior
+    isClicked = true;   // Set the flag to true when the image is clicked
+});
 
 let previousX = 0;
 let flipped;
@@ -58,4 +64,4 @@ $("#net").click(function () {
         }, 1000);
     }
 });
-
+//Samuel Net End

@@ -33,13 +33,14 @@ body {
     position: absolute;
 }
 
+/* Keyframes for normal rotate animation */
 @keyframes rotateAndBack {
     0% {
         transform: rotate(0deg);
     }
 
     50% {
-        transform: rotate(-600deg);
+        transform: rotate(-100deg);
     }
 
     100% {
@@ -47,20 +48,22 @@ body {
     }
 }
 
+/* Keyframes for flipped rotate animation */
 @keyframes rotateAndBackFlipped {
     0% {
-        transform: rotate(0deg);
+        transform: scaleX(-1) rotate(0deg);
     }
 
     50% {
-        transform: rotate(600deg);
+        transform: scaleX(-1) rotate(-100deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: scaleX(-1) rotate(0deg);
     }
 }
 
+/* Animation classes */
 .rotate {
     animation: rotateAndBack 1s ease;
 }
