@@ -11,15 +11,20 @@ body {
 }
 
 #wateringcan {
-    width: 200px;
+    width: 150px;
     position: fixed;
     bottom: 20%;
     left: 40%;
+    transition: transform 0.5s;
+}
+
+.tilt {
+    transform: rotate(-45deg);
 }
 
 
 .waterdrop {
-    width: 20px;
+    width: 10px;
 }
 
 #net {
