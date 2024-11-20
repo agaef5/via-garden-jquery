@@ -80,16 +80,47 @@ body {
   animation: rotateAndBackFlipped 1s ease;
 }
 
+/* Ash */
+
 .apple {
-  height: 50px;
   width: auto;
   position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#apple1 {
+  height: 50px;
+  top: 10%;
+}
+
+#apple2 {
+  height: 60px;
+  top: 20%;
+}
+
+#apple3 {
+  height: 40px;
+  width: auto;
+  top: 15%;
 }
 
 #tree {
   position: fixed;
   bottom: 20px;
-  left: 50%;
+  left: 58%;
+  height: 95%;
+  z-index: -2;
+}
+
+.trial {
+  position: fixed;
+  overflow: hidden;
+  height: 40%;
+  width: 30%;
+  left: 63%;
+  bottom: 50%;
+  z-index: 0;
 }
 
 .basket {
@@ -97,6 +128,15 @@ body {
   position: fixed;
   bottom: 20px;
   left: 20%;
+}
+
+/* Ash */
+
+#garden {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: lightgreen;
 }
 
 body {
