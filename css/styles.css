@@ -20,7 +20,7 @@ body {
 }
 
 #wateringcan {
-  width: 150px;
+  width: 200px;
   position: fixed;
   bottom: 20%;
   left: 40%;
@@ -32,7 +32,18 @@ body {
 }
 
 .waterdrop {
-  width: 10px;
+  width: 20px;
+  position: absolute;
+  display: none;
+}
+
+#flower {
+  width: 50px;
+  /* Adjust based on your image */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: none;
+  /* Initially hidden */
 }
 
 #net {
