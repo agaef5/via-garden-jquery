@@ -1,22 +1,22 @@
-$(document).ready(function () {
-  // Add event listeners for mouse enter and mouse leave
-  $("#wateringcan").hover(
-    function () {
-      $(this).addClass("tilt");
-    },
-    function () {
-      $(this).removeClass("tilt");
-    }
-  );
-});
+// $(document).ready(function () {
+//   // Add event listeners for mouse enter and mouse leave
+//   $("#wateringcan").hover(
+//     function () {
+//       $(this).addClass("tilt");
+//     },
+//     function () {
+//       $(this).removeClass("tilt");
+//     }
+//   );
+// });
 
 //Samuel Net Start
 
-$(document).on("mousedown", function (e) {
-  //Disable the drag and drop of the pics
-  e.preventDefault();
-  isClicked = true;
-});
+// $(document).on("mousedown", function (e) {
+//   //Disable the drag and drop of the pics
+//   e.preventDefault();
+//   isClicked = true;
+// });
 
 let previousX = 0;
 let flipped; // Variable for checking if the net is flipped
@@ -42,20 +42,20 @@ $(document).mousemove(function (e) {
   previousX = currentX;
 });
 
-$("#net").click(function () {
+$(document).click(function () {
   //Animation for net when click
   if (flipped === false) {
-    $(this).addClass("rotate");
+    $("#net").addClass("rotate");
 
     setTimeout(() => {
-      $(this).removeClass("rotate");
+      $("#net").removeClass("rotate");
     }, 1000);
   }
   if (flipped === true) {
-    $(this).addClass("rotateFlipped");
+    $("#net").addClass("rotateFlipped");
 
     setTimeout(() => {
-      $(this).removeClass("rotateFlipped");
+      $("#net").removeClass("rotateFlipped");
     }, 1000);
   }
 });
@@ -64,8 +64,8 @@ $("#net").click(function () {
 // Aga - butterfly start
 $(document).ready(function () {
   let globalSpeedModifier = 2000; // Initial speed in milliseconds
-  const fastSpeed = 500; // Speed when mouse is moving (milliseconds per transition)
-  const normalSpeed = 2000; // Speed when mouse is still
+  const fastSpeed = 100; // Speed when mouse is moving (milliseconds per transition)
+  const normalSpeed = 3000; // Speed when mouse is still
   let mouseMoving = false; // Tracks mouse movement
   let globalAngle = 0; // Initial angle for rotation
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
   }
 
   // Mouse movement detection
-  $(document).mousemove(function () {
+  $("#butterfly").hover(function () {
     if (mouseMoving) {
       return;
     }
@@ -258,8 +258,9 @@ $(document).ready(function () {
     moveToBasket("#apple3", 2);
   });
 });
+//Ash - apples end
 
-//Ash
+// Willem - watering can start
 $(document).ready(function () {
   const $wateringCan = $("#wateringcan img"); // Select the image inside the watering can div
   const $waterdrops = $(".waterdrop");
@@ -280,7 +281,7 @@ $(document).ready(function () {
 
     if ($(this).parent().hasClass("tilt")) {
       // Add a small delay before starting the water animation
-      setTimeout(startWaterAnimation, 500);
+      setTimeout(startWaterAnimation, 100);
     } else {
       stopWaterAnimation();
       changeCanColor(); // Change color when untitled

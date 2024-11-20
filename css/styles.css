@@ -20,14 +20,18 @@ body {
 }
 
 #wateringcan {
+}
+
+.wateringcan {
   width: 200px;
-  position: fixed;
+  position: absolute;
   bottom: 20%;
   left: 40%;
   transition: transform 0.5s;
 }
 
 .tilt {
+  transform-origin: center center;
   transform: rotate(-45deg);
 }
 
